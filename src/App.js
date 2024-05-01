@@ -24,7 +24,7 @@ function handleCalculation() {
         <div id="displayResult">
             <div className="answer">
                 <p>You have</p>
-                <h2 id="result">0</h2>
+                <h2 id="result">{results}</h2>
                 <p>weeks left...</p>
             </div>
             <div className="alert">
@@ -37,7 +37,7 @@ function handleCalculation() {
 
         <div className="buttons">
             <input type="number" id="ageInput" placeholder="Enter your age" />
-            <button id="calcBtn" className="btn">Calculate</button>
+            <button id="calcBtn" className="btn" onClick={handleCalculation}>Calculate</button>
             <button id="resetBtn" className="btn">Reset</button>
             <a href="index.html" className="refresh">anchor tag</a>
         </div>
