@@ -8,14 +8,14 @@ function App() {
   const [results, setResults] = useState(0);
 
   useEffect(() => {
-    // Set alertMessage to false after a short delay (optional)
-    const timer = setTimeout(() => {
-      setAlertMessage(false);
-    }, 3000);
+  // Set alertMessage to false after a short delay (optional)
+  const timer = setTimeout(() => {
+    setAlertMessage(false);
+  }, 3000);
 
-    // Cleanup function to clear the timer
-    return () => clearTimeout(timer);
-  }, []); // Empty dependency array to run the effect only once
+  // Cleanup function to clear the timer
+  return () => clearTimeout(timer);
+}, []);
 
   function handleCalculation() {
     if (age === '') {
@@ -36,7 +36,14 @@ function App() {
 
   const commaNum = (weeks) => {
 
-return weeks.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    const commaNum = (weeks) => {
+  console.log('Original weeks:', weeks);
+  const weeksString = weeks.toString();
+  console.log('String representation:', weeksString);
+  const numberWithCommas = weeksString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  console.log('With commas:', numberWithCommas);
+  return numberWithCommas;
+}
 
 }
 
