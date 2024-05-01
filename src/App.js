@@ -42,7 +42,7 @@ function App() {
         <div id="displayResult">
           <div className={`answer${results !== 0 ? 'active' : ''}`}>
             <p>You have</p>
-            <h2>{isNaN(results) ? 'Calculating...' : results}</h2>
+            <h2>{results}</h2>
             <p>weeks left...</p>
           </div>
           <div className={`alert ${alertMessage ? 'active' : ''}`}>
