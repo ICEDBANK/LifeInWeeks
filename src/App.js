@@ -23,6 +23,16 @@ useEffect( () => {
 
 function handleCalculation() {
 
+  if (age === '') {
+
+      setAlertMessage(true);
+
+  } else if(isNaN(age)) {
+
+      setAlert2Message(true);
+
+  }
+
   const remainingYears = 90 - age;
   const remainingWeeks = remainingYears * 52;
   setResults(remainingWeeks);
