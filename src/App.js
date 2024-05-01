@@ -28,7 +28,7 @@ function handleReset () {
         <p>Assuming that we are lucky enough to live in 90 years</p>
 
         <div id="displayResult">
-            <div className="answer">
+            <div className={`answer${results !== 0 ? 'active' : ''}`}>
                 <p>You have</p>
                 <h2>{results}</h2>
                 <p>weeks left...</p>
