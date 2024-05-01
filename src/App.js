@@ -22,19 +22,20 @@ useEffect( () => {
 },[alertMessage, alert2Message]);
 
 function handleCalculation() {
-  if (age.trim() === '') {
-    setAlertMessage(true);
-    setAlert2Message(false); // Ensure the other alert is cleared
-  } else if (isNaN(age)) {
-    setAlertMessage(false); // Ensure the other alert is cleared
-    setAlert2Message(true);
-  } else {
-    setAlertMessage(false); // Clear both alerts if input is valid
-    setAlert2Message(false);
-    const remainingYears = 90 - parseInt(age);
-    const remainingWeeks = remainingYears * 52;
-    setResults(remainingWeeks);
+
+  if (age === '') {
+
+      setAlertMessage(true);
+
+  } else if(isNaN(age)) {
+
+      setAlert2Message(true)
+
   }
+
+  const remainingYears = 90 - age;
+  const remainingWeeks = remainingYears * 52;
+  setResults(remainingWeeks);
 }
 
 function handleReset () {
