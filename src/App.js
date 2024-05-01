@@ -1,9 +1,9 @@
-
+import { useState } from 'react';
 import './style.css';
 
 function App() {
 
-
+const [alertMessage, setAlertMessage] = useState('');
 
   return (
     <>
