@@ -7,12 +7,6 @@ function App() {
   const [age, setAge] = useState(0);
   const [results, setResults] = useState(0);
 
-  const commaNum = (weeks) => {
-
-return weeks.toString().replace(/\B(?=(\d(3))+(?!\d))/g,',');
-
-}
-
   useEffect(() => {
     // Set alertMessage to false after a short delay (optional)
     const timer = setTimeout(() => {
@@ -33,11 +27,18 @@ return weeks.toString().replace(/\B(?=(\d(3))+(?!\d))/g,',');
       const remainingYears = 90 - age;
       const remainingWeeks = remainingYears * 52;
       setResults(commaNum(remainingWeeks));
+      setAge('');
 
     }
 
 
   }
+
+  const commaNum = (weeks) => {
+
+return weeks.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+}
 
   function handleReset() {
     window.location.reload();
@@ -69,6 +70,7 @@ return weeks.toString().replace(/\B(?=(\d(3))+(?!\d))/g,',');
             type="text"
             id="ageInput"
             placeholder="Enter your age"
+            value={age}
             onChange={(e) => setAge(e.target.value)}
           />
           <button id="calcBtn" className="btn" onClick={handleCalculation}>
