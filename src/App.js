@@ -14,6 +14,12 @@ function handleCalculation() {
   setResults(remainingWeeks);
 }
 
+function handleReset () {
+
+  window.location.reload();
+
+}
+
   return (
     <>
 
@@ -38,7 +44,7 @@ function handleCalculation() {
         <div className="buttons">
             <input type="number" id="ageInput" placeholder="Enter your age" onChange={(e) => setAge(e.target.value)}/>
             <button id="calcBtn" className="btn" onClick={handleCalculation}>Calculate</button>
-            <button id="resetBtn" className="btn">Reset</button>
+            <button id="resetBtn" className="btn" onClick={handleReset}>Reset</button>
             <a href="index.html" className="refresh">anchor tag</a>
         </div>
     </div>
