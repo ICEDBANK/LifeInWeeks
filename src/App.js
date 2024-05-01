@@ -24,7 +24,7 @@ function handleCalculation() {
         <div id="displayResult">
             <div className="answer">
                 <p>You have</p>
-                <h2 id="result">{results}</h2>
+                <h2>{results}</h2>
                 <p>weeks left...</p>
             </div>
             <div className="alert">
