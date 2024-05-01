@@ -22,11 +22,15 @@ function App() {
       setAlertMessage(true);
     } else if (isNaN(age)) {
       setAlert2Message(true);
+    }else {
+      
+      const remainingYears = 90 - age;
+      const remainingWeeks = remainingYears * 52;
+      setResults(remainingWeeks);
+
     }
 
-    const remainingYears = 90 - age;
-    const remainingWeeks = remainingYears * 52;
-    setResults(remainingWeeks);
+
   }
 
   function handleReset() {
