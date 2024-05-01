@@ -57,12 +57,12 @@ function handleReset () {
                 <h2>{results}</h2>
                 <p>weeks left...</p>
             </div>
-            <div className={`alert${alertMessage !== 0 ? 'active' : ''}`}>
-                <p>Please enter your age below...</p>
-            </div>
-            <div className={`alert2 ${alert2Message !== 0 ? 'active' : ''}`}>
-                <p>Please enter a number...</p>
-            </div>
+            <div className={`alert ${alertMessage ? 'active' : ''}`}>
+    <p>Please enter your age below...</p>
+</div>
+<div className={`alert2 ${alert2Message ? 'active' : ''}`}>
+    <p>Please enter a number...</p>
+</div>
         </div>
 
         <div className="buttons">
