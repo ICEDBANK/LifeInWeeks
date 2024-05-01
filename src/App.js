@@ -1,12 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './style.css';
 
 function App() {
 
 const [alertMessage, setAlertMessage] = useState(false);
-const [alert2Message, setAler2tMessage] = useState(false);
+const [alert2Message, setAlert2Message] = useState(false);
 const [age, setAge] = useState(0);
 const [results, setResults] = useState(0);
+
+useEffect( () => {
+    
+  const timer = setTimeout(() => {
+
+    setAlertMessage(false);
+    setAlert2Message(false);
+
+  }, 4000);
+
+  return () => clearTimeout(timer);
+
+},[alertMessage, alert2Message]);
 
 function handleCalculation() {
 
