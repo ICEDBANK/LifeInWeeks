@@ -36,7 +36,7 @@ function handleCalculation() {
         </div>
 
         <div className="buttons">
-            <input type="number" id="ageInput" placeholder="Enter your age" />
+            <input type="number" id="ageInput" placeholder="Enter your age" onChange={(e) => setAge(e.target.value)}/>
             <button id="calcBtn" className="btn" onClick={handleCalculation}>Calculate</button>
             <button id="resetBtn" className="btn">Reset</button>
             <a href="index.html" className="refresh">anchor tag</a>
