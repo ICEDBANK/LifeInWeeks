@@ -7,6 +7,12 @@ function App() {
   const [age, setAge] = useState(0);
   const [results, setResults] = useState(0);
 
+  const commaNum = (weeks) => {
+
+return weeks.toString().replace(/\B(?=(\d(3))+(?!\d))/g,',');
+
+}
+
   useEffect(() => {
     // Set alertMessage to false after a short delay (optional)
     const timer = setTimeout(() => {
@@ -23,10 +29,10 @@ function App() {
     } else if (isNaN(age)) {
       setAlert2Message(true);
     }else {
-      
+
       const remainingYears = 90 - age;
       const remainingWeeks = remainingYears * 52;
-      setResults(remainingWeeks);
+      setResults(commaNum(remainingWeeks));
 
     }
 
@@ -36,6 +42,7 @@ function App() {
   function handleReset() {
     window.location.reload();
   }
+
 
   return (
     <>
