@@ -35,17 +35,10 @@ function App() {
   }
 
   const commaNum = (weeks) => {
-
-    const commaNum = (weeks) => {
-  console.log('Original weeks:', weeks);
-  const weeksString = weeks.toString();
-  console.log('String representation:', weeksString);
-  const numberWithCommas = weeksString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  console.log('With commas:', numberWithCommas);
-  return numberWithCommas;
+  console.log("Received weeks:", weeks);
+  return weeks.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-}
 
   function handleReset() {
     window.location.reload();
